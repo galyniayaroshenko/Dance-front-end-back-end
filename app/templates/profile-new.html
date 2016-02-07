@@ -1,0 +1,76 @@
+
+    <section class="main-section" ng-submit="editUser()">
+
+
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel "> 
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.viewAllProfile">All User</a> | <a ui-sref="base.newProfile">Add User</a>
+              </div>
+              <div class="large-9 left category"> User</div>
+          </div>
+          </div>
+        </div>
+
+
+
+      <form>
+          <img ng-src="images/users/{{viewProfile.user.img}}">
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Pick img user
+                <input type="file" size="30"  ngf-select ng-model="picFile" name="fileimg"
+    accept="*" ngf-max-size="100MB">
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Name user
+                  <input type="text" ng-model="user.name" name="" class="text" id="title" placeholder="User name Here"></input>
+              </label>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Email user
+                    <input type="text" ng-model="user.email" name="" class="text" id="title" placeholder="User email Here"></input>
+                </label>
+              </div>
+
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>Password user
+                      <input type="text" ng-model="user.password" name="" class="text" id="title" placeholder="User password Here"></input>
+                  </label>
+                </div>
+              </div>
+
+
+            <a role="button"  class="button " ng-click="createUser(picFile)" value="Save" >Save</a>
+            <a role="button" href="#" class="button " value="Reset">Reset</a>
+
+
+          {{picFile.name}}
+
+                        <i ng-show="myForm.file.$error.maxSize">File too large
+                          {{picFile.size / 100000000|number:2}}MB: max 2M</i>
+
+
+
+                          <div class="progress small-# large-# secondary alert success radius round" ng-show="picFile.progress >= 0">
+                            <span align="center" class="meter" style="width:{{picFile.progress}}%; background: green; color:#ffffff" ng-bind="picFile.progress + '%'"></span>
+                          </div>
+
+                          <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+
+
+        </form>
+
+
+      </div>
+    </section>

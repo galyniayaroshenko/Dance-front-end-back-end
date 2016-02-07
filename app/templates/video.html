@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.video">All video</a> | <a ui-sref="base.newVideo">Add video</a>
+              </div>
+              <div class="large-9 left category"> Video </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="video in videoList">
+            <div ng-bind-html="video.video"></div>
+            <div class="panel">
+              <h5>{{video.name}}</h5>
+              <a ui-sref="base.viewVideo({id:video.objectId})" class="subheader ">View</a> | <a ng-click="deleteVideo({id:video.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

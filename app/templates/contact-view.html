@@ -1,0 +1,35 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.contact">All Contact </a> | <a ui-sref="base.newContact">Add Contact </a>
+              </div>
+              <div class="large-9 left category"> Contact </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-12 column ">
+            <h3>Details for {{contactView.name}}</h3>
+            <div class="row">
+              <div class="large-6 right  panel" >
+                <div>name</div>
+                <div>phone</div>
+                <div>fax</div>
+                <div>street</div>
+              </div>
+              <div class="large-6 left category panel">
+                <div>{{contactView.name}}</div>
+                <div>{{contactView.phone}}</div>
+                <div>{{contactView.fax}}</div>
+                <div>{{contactView.street}}</div>
+              </div>
+          </div>
+
+          <a role="button" class="button " ui-sref="base.editContact({id:contactView.objectId})" >Edit</a>
+        </div>
+</div>
+</section>

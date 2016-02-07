@@ -1,0 +1,24 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.viewAllProfile">All User</a> | <a ui-sref="base.newProfile">Add User</a>
+              </div>
+              <div class="large-9 left category"> Users</div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+                  <div class="large-3 medium-4 small-6 columns" ng-repeat="user in userList.users">
+                    <img class="img-content" ng-src="images/users/{{user.img}}">
+                    <div class="panel">
+
+                      <h5>{{user.name}}</h5>
+                      <a ui-sref="base.profile({id:user._id})" class="subheader ">View</a> | <a ng-click="deleteUser({id:user._id})" class="subheader">Delete</a>
+                    </div>
+                  </div>
+        </div>
+</section>

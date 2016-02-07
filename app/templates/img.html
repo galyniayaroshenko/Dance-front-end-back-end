@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.img">All image</a> | <a ui-sref="base.newImg">Add image</a>
+              </div>
+              <div class="large-9 left category"> Image </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="images in imgList">
+            <img class="img-content" ng-src="{{images.img.url}}">
+            <div class="panel">
+              <h5>{{images.country}}</h5>
+              <a ui-sref="base.viewImg({id:images.objectId})" class="subheader ">View</a> | <a ng-click="deleteImg({id:images.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

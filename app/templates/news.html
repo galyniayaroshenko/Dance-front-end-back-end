@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.news">All News </a> | <a ui-sref="base.newNews">Add News </a>
+              </div>
+              <div class="large-9 left category"> News </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="news in newsList">
+            <img class="img-content" ng-src="{{news.img.url}}">
+            <div class="panel">
+              <h5>{{news.name}}</h5>
+              <a ui-sref="base.viewNews({id:news.objectId})" class="subheader ">View</a> | <a ng-click="deleteNews({id:news.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

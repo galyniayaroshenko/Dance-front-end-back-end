@@ -1,0 +1,23 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.peopleEffort">All PeopleEffort</a> | <a ui-sref="base.newPeopleEffort">Add PeopleEffort</a>
+              </div>
+              <div class="large-9 left category"> PeopleEffort </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="people in peopleEffortList">
+            <img class="img-content" ng-src="{{people.foto.url}}">
+            <div class="panel">
+              <h5>{{people.name}}</h5>
+              <a ui-sref="base.viewPeopleEffort({id:people.objectId})" class="subheader ">View</a> | <a ng-click="deletePeopleEffort({id:people.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

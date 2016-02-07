@@ -1,0 +1,17 @@
+{
+  "dependencies": [
+    "./bower_components/jquery/dist/jquery.js",
+    "./bower_components/angular/angular.js",
+    "./bower_components/angular-resource/angular-resource.js",
+    "./bower_components/ngstorage/ngStorage.js",
+    "./bower_components/angular-ui-router/release/angular-ui-router.js",
+    "./bower_components/ng-file-upload/ng-file-upload.js",
+    "./bower_components/angular-animate/angular-animate.js",
+    "./bower_components/angular-foundation/mm-foundation.js",
+    "./bower_components/angular-cookies/angular-cookies.js",
+    "./bower_components/foundation/js/foundation.js",
+    "./bower_components/foundation/js/vendor/modernizr.js",
+    "./bower_components/foundation/js/foundation/foundation.topbar.js",
+    "./bower_components/ng-file-upload/ng-file-upload-shim.js"
+      ]
+}

@@ -1,0 +1,49 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.contact">All Contact</a> | <a ui-sref="base.newContact">Add Contact</a>
+              </div>
+              <div class="large-9 left category"> Contact </div>
+          </div>
+          </div>
+        </div>
+        <form role="form" ng-submit="addContact()">
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Contact name
+                <input type="text" ng-model="contact.name"  name="" id="title" placeholder="Contact name Here"></input>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label> Contact Phone
+                <input type="number" ng-model="contact.phone"   name="" id="title" placeholder="Contact Phone Here"></input>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label> Contact  Fax
+                <input type="number" ng-model="contact.fax"   name="" id="title" placeholder="Contact  Fax Here"></input>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label> Contact  Street
+                <input type="text" ng-model="contact.street"   name="" id="title" placeholder=" Contact  Street Here"></input>
+              </label>
+            </div>
+          </div>
+            <a role="button" class="button" ng-click="createContact()" value="Save">Save</a>
+            <a role="button" href="#" class="button">Reset</a>
+          </div>
+          {{picFileImg.name}}
+          <div ng-show="load"><img src="images/load.gif" /></div>
+        </form>
+</section>

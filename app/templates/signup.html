@@ -1,0 +1,37 @@
+
+
+    <div class="row">
+        <div class="large-6 large-centered columns">
+          <div class="signup-panel ">
+            <p class="welcome"> Welcome to Admin!</p>
+            <form>
+              <div class="row collapse">
+                <div class="small-2  columns">
+                  <span class="prefix"><i class="fi-torso-female"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" ng-model="user.name" placeholder="username">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns">
+                  <span class="prefix"><i class="fi-mail"></i></span>
+                </div>
+                <div class="small-10  columns">
+                  <input type="text" ng-model="user.email" placeholder="email">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="small-2 columns ">
+                  <span class="prefix"><i class="fi-lock"></i></span>
+                </div>
+                <div class="small-10 columns ">
+                  <input type="text" ng-model="user.password" placeholder="password">
+                </div>
+              </div>
+            </form>
+            <a class="button" ng-click="createUser()">Sign Up! </a>
+             <p>Already have an account? <a ui-sref="acount.signin">Login here &raquo</a></p>
+          </div>
+        </div>
+       </div>

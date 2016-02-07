@@ -1,0 +1,51 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.aboutUs">All AboutUs </a> | <a ui-sref="base.newAboutUs">Add AboutUs </a>
+              </div>
+              <div class="large-9 left category"> AboutUs </div>
+          </div>
+          </div>
+        </div>
+        <form role="form" ng-submit="addAboutUs()">
+          <div class="row">
+            <div class="large-12 columns">
+              <label>AboutUs name
+                <input type="text" ng-model="OboutUs.name"  name="" id="title" placeholder="AboutUs name Here"></input>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label> AboutUs Title
+                <input type="text" ng-model="OboutUs.title1"   name="" id="title" placeholder="AboutUs Title Here"></input>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>AboutUs description
+                <textarea placeholder="AboutUs description" ng-model="OboutUs.description1"></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns">
+              <label>Pick img
+                <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
+        accept="*" ngf-max-size="100MB">
+              </label>
+            </div>
+          </div>
+            <a role="button" class="button" ng-click="createAboutUs(picFileImg)" value="Save">Save</a>
+            <a role="button" href="#" class="button">Reset</a>
+          </div>
+          {{picFileImg.name}}
+        </div>
+        <div ng-show="load"><img src="images/load.gif" /></div>
+        </form>
+</section>
