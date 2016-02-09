@@ -36,7 +36,9 @@
           <div class="row">
             <div class="large-12 columns">
               <label>Image year
-                <input type="text" ng-model="Portholio.year"  name="" id="title" placeholder="Genre Title Here"></input>
+                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
+                  <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
+                </select>
               </label>
             </div>
           </div>

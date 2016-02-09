@@ -1,0 +1,21 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.category">All Category </a> | <a ui-sref="base.newCategory">Add Category </a>
+              </div>
+              <div class="large-9 left category"> Category </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="category in categoryList">
+            <div class="panel">
+              <h5>{{category.name}}</h5>
+              <a ui-sref="base.viewCategory({id:category.objectId})" class="subheader ">View</a> | <a ng-click="deleteCategory({id:category.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

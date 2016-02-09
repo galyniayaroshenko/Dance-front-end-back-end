@@ -35,7 +35,9 @@
   <div class="row">
     <div class="large-12 columns">
       <label>Image year
-        <input type="text" ng-model="Portholio.year"  name="" id="title" placeholder="Genre Title Here"></input>
+        <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
+          <option  value="{{year.objectId}}">{{year.year}}</option>
+        </select>
       </label>
     </div>
   </div>
@@ -52,6 +54,6 @@ accept="*" ngf-max-size="100MB">
     <a role="button" href="#" class="button">Reset</a>
   </div>
   {{picFileImg.name}}
-<div ng-show="load"><img src="images/load.gif" /></div>        
+<div ng-show="load"><img src="images/load.gif" /></div>
 </form>
         </section>

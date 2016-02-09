@@ -1,11 +1,19 @@
 angular.module('app')
-  .controller('ImgCreateController', ['Img', 'Category', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function (Img, Category, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+  .controller('ImgCreateController', ['Img', 'Category', 'Year', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (Img, Category, Year, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
 
 
 Category.get(function(data) {
   $scope.category = data.results;
   console.log('cat', $scope.category);
 });
+
+Year.get(function(data) {
+  $scope.year = data.results;
+  console.log('year', $scope.year);
+});
+
+
 $scope.Portholio = {};
 // $scope.Portholio.category = {};
       $scope.createImg = function(file) {
@@ -26,6 +34,8 @@ $scope.Portholio = {};
               console.log($scope.Portholio);
               $scope.Portholio.category.className = "category";
               $scope.Portholio.category.__type = "Pointer";
+              $scope.Portholio.year.className = "year";
+              $scope.Portholio.year.__type = "Pointer";
               // $scope.Portholio.category.objectId = $scope.Portholio.category;
 
               Img.create($scope.Portholio, function(data) {

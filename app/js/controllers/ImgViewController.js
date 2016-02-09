@@ -3,6 +3,6 @@ angular.module('app')
     console.log($stateParams.id);
     Img.get({action:$stateParams.id},function(data){
       $scope.imgView = data;
-        console.log($scope.imgView);
+        console.log('iV', $scope.imgView);
       });
   }]);

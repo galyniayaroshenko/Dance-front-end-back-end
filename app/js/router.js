@@ -315,6 +315,83 @@ angular.module('app')
     })
 
 
+
+    .state('base.category', {
+      url: '/category',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/category.html',
+          controller: 'CategoryListController'
+        }
+      }
+    })
+    .state('base.newCategory', {
+      url: '/category/new',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/category-add.html',
+          controller: 'CategoryCreateController'
+        }
+      }
+    })
+    .state('base.editCategory', {
+      url: '/category/:id/edit',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/category-edit.html',
+          controller: 'CategoryEditController'
+        }
+      }
+    })
+    .state('base.viewCategory', {
+      url: '/category/:id/view',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/category-view.html',
+          controller: 'CategoryViewController'
+        }
+      }
+    })
+
+
+    .state('base.year', {
+      url: '/year',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/year.html',
+          controller: 'YearListController'
+        }
+      }
+    })
+    .state('base.newYear', {
+      url: '/year/new',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/year-add.html',
+          controller: 'YearCreateController'
+        }
+      }
+    })
+    .state('base.editYear', {
+      url: '/year/:id/edit',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/year-edit.html',
+          controller: 'YearEditController'
+        }
+      }
+    })
+    .state('base.viewYear', {
+      url: '/year/:id/view',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/year-view.html',
+          controller: 'YearViewController'
+        }
+      }
+    })
+
+
     .state('acount', {
       url: '/acount',
       views: {

@@ -1,12 +1,19 @@
 angular.module('app')
-  .controller('ImgEditController', ['Img', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function (Img, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+  .controller('ImgEditController', ['Img', 'Year', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (Img, Year, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
 
     Img.getOne({action: $stateParams.id}, function(data) {
       $scope.Portholio = data;
       console.log($scope.Portholio.title);
-      console.log($scope.Portholio);
-    });
+      console.log('port', $scope.Portholio);
+      console.log('portid', $scope.Portholio.year.objectId);
 
+    });
+    console.log('portid', $scope.Portholio.year.objectId);
+    Year.get( function(data) {
+       $scope.year = data;
+      console.log('year', $scope.year);
+    });
 
       $scope.updateImg = function(file) {
         $scope.load = "loading";
@@ -23,6 +30,10 @@ angular.module('app')
               $scope.Portholio.img = file.result;
               $scope.Portholio.img.__type = "File";
               console.log($scope.Portholio.img);
+              $scope.Portholio.category.className = "category";
+              $scope.Portholio.category.__type = "Pointer";
+              $scope.Portholio.year.className = "year";
+              $scope.Portholio.year.__type = "Pointer";
               Img.update({action: $stateParams.id}, $scope.Portholio, function(data) {
                 if (data) {
                   console.log("success");

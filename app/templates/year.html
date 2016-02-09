@@ -1,0 +1,21 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.year">All Year </a> | <a ui-sref="base.newYear">Add Year </a>
+              </div>
+              <div class="large-9 left category"> Year </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="year in yearList">
+            <div class="panel">
+              <h5>{{year.year}}</h5>
+              <a ui-sref="base.viewYear({id:year.objectId})" class="subheader ">View</a> | <a ng-click="deleteYear({id:year.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>
