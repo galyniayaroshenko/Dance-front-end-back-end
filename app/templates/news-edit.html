@@ -33,9 +33,13 @@ accept="*" ngf-max-size="100MB">
       </label>
     </div>
   </div>
+  <div class="row">
+    <div class="large-12 columns">
     <a role="button" class="button" ng-click="updateNews(picFileImg)" value="Save">Save</a>
     <a role="button" href="#" class="button">Reset</a>
   </div>
+</div>
+</div>
   {{picFileImg.name}}
   <div ng-show="load"><img src="images/load.gif" /></div>
 </form>

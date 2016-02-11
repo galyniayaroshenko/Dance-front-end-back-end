@@ -19,7 +19,7 @@ PeopleEffort.getOne({ action: $stateParams.id }, function (data) {
               file.result = data.data;
               $scope.peopleEffort.foto = file.result;
               $scope.peopleEffort.foto.__type = "File";
-              console.log($scope.peopleEffort.foto);
+              console.log('foto', $scope.peopleEffort.foto);
               PeopleEffort.update({action: $stateParams.id}, $scope.peopleEffort, function(data) {
                 if (data) {
                   console.log("success");

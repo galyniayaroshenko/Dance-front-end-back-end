@@ -29,13 +29,13 @@
           <div class="row">
             <div class="large-6 columns">
               <label>Pick img music
-                <input type="file" size="30"  ngf-select ng-model="picFile" name="file"
+                <input type="file" size="30"  ngf-select ng-model="picFileImg" name="file"
     accept="*" ngf-max-size="100MB">
               </label>
             </div>
             <div class="large-6 columns">
               <label>Pick music
-                <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
+                <input type="file" size="30"  ngf-select ng-model="picFile" name="fileimg"
     accept="*" ngf-max-size="100MB">
               </label>
             </div>
@@ -57,9 +57,13 @@
                 <textarea placeholder="Description music" ng-model="music.description"></textarea>
               </label>
             </div>
+            <div class="row">
+              <div class="large-12 columns">
             <a role="button" class="button " ng-click="createMusic(picFile,picFileImg)" value="Save" >Save</a>
             <a role="button" href="#" class="button " value="Reset">Reset</a>
           </div>
+        </div>
+      </div>
    {{picFile.name}}
           {{picFileImg.name}}
           <div ng-show="load"><img src="images/load.gif" /></div>

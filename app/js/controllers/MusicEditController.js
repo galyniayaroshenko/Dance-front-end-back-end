@@ -21,9 +21,9 @@ $scope.Music = {}
              transformRequest: angular.identity
           }).then(function(data) {
               file.result = data.data;
-              $scope.Music.song = file.result;
-              $scope.Music.song.__type = "File";
-              console.log($scope.Music.song);
+              $scope.Music.songs = file.result;
+              $scope.Music.songs.__type = "File";
+              console.log($scope.Music.songs);
             $http.post("https://api.parse.com/1/files/"+ fileImg.name, fileImg, {
                withCredentials: false,
                headers: {

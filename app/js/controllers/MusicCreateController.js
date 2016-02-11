@@ -10,7 +10,7 @@ $scope.music = {}
 
       $scope.createMusic = function(file, fileImg) {
         $scope.load = "loading";
-        console.log($scope.music);
+        console.log('oM', $scope.music);
           $http.post("https://api.parse.com/1/files/"+ file.name, file, {
              withCredentials: false,
              headers: {
@@ -20,9 +20,9 @@ $scope.music = {}
           }).then(function(data) {
               file.result = data.data;
 
-              $scope.music.song = file.result;
-              $scope.music.song.__type = "File";
-              console.log($scope.music.song);
+              $scope.music.songs = file.result;
+              $scope.music.songs.__type = "File";
+              console.log('mus', $scope.music.songs);
             $http.post("https://api.parse.com/1/files/"+ fileImg.name, fileImg, {
                withCredentials: false,
                headers: {
