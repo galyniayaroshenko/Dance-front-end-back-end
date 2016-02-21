@@ -35,18 +35,18 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image year
-                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
-                  <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
+              <label>Pick category
+                <select type="text" ng-model="Portholio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
+                  <option ng-repeat="categorys in category" value="{{categorys.objectId}}">{{categorys.name}}</option>
                 </select>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Pick category
-                <select type="text" ng-model="Portholio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
-                  <option ng-repeat="categorys in category" value="{{categorys.objectId}}">{{categorys.name}}</option>
+              <label>Image year
+                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
+                  <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
                 </select>
               </label>
             </div>

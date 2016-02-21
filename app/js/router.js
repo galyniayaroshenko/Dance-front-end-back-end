@@ -14,7 +14,6 @@ angular.module('app')
         'header@base': {
           templateUrl: 'templates/startPage/header.html',
           controller: 'ProfileController'
-          // controller: 'headerController'
         }
       }
     })
@@ -165,43 +164,6 @@ angular.module('app')
         'main@base': {
           templateUrl: 'templates/img-edit.html',
           controller: 'ImgEditController'
-        }
-      }
-    })
-
-    .state('base.profile', {
-      url: '/profile/:id/view',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/profile.html',
-          controller: 'ProfileController'
-        }
-      }
-    })
-    .state('base.newProfile', {
-      url: '/profile/new',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/profile-new.html',
-          controller: 'ProfileCreateController'
-        }
-      }
-    })
-    .state('base.editProfile', {
-      url: '/profile/:id/edit',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/profile-edit.html',
-          controller: 'ProfileEditController'
-        }
-      }
-    })
-    .state('base.viewAllProfile', {
-      url: '/profile/viewAll',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/profile-view-all.html',
-          controller: 'ProfileViewAllController'
         }
       }
     })
@@ -400,18 +362,6 @@ angular.module('app')
         },
       }
     })
-
-
-    // .state('acount.signup', {
-    //   url: '/signup/new',
-    //   views: {
-    //     'content@acount': {
-    //       templateUrl: 'templates/signup.html',
-    //       controller: 'signupController'
-    //
-    //     }
-    //   }
-    // })
     .state('acount.signin', {
       url: '/signin',
       views: {

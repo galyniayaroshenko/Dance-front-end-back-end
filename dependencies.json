@@ -12,6 +12,7 @@
     "./bower_components/foundation/js/foundation.js",
     "./bower_components/foundation/js/vendor/modernizr.js",
     "./bower_components/foundation/js/foundation/foundation.topbar.js",
-    "./bower_components/ng-file-upload/ng-file-upload-shim.js"
+    "./bower_components/ng-file-upload/ng-file-upload-shim.js",
+    "./bower_components/angular-ckeditor/angular-ckeditor.js"
       ]
 }

@@ -12,6 +12,7 @@ angular.module('app')
       if (data) {
         $scope.load = '';
         console.log("success");
+        $state.go('base.editYear');
       }
     });
   }

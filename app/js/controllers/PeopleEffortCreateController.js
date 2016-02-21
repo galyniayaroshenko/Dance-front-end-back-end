@@ -22,6 +22,7 @@ $scope.peopleEffort = {};
               PeopleEffort.create($scope.peopleEffort, function(data) {
                 if (data) {
                   console.log("success");
+                  $state.go('base.editPeopleEffort');
                 }
               });
           });

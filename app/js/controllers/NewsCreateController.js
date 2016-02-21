@@ -1,6 +1,7 @@
 
   angular.module('app')
-    .controller('NewsCreateController', ['News', '$scope', 'fileUpload', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function(News, $scope, fileUpload, $stateParams, $scope, $state, Upload, $timeout, host, $http){
+    .controller('NewsCreateController', ['News', '$scope', 'fileUpload', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', '$sce',
+      function(News, $scope, fileUpload, $stateParams, $scope, $state, Upload, $timeout, host, $http){
       $scope.news = {};
 
            $scope.createNews = function(file) {
@@ -21,6 +22,7 @@
                    News.create($scope.news, function(data) {
                      if (data) {
                        console.log("success");
+                       $state.go('base.editNews');
                      }
                    });
                });

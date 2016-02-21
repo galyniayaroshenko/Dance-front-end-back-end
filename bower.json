@@ -29,6 +29,7 @@
     "angular-foundation": "~0.8.0",
     "angular-animate": "~1.4.7",
     "angular-local-storage": "~0.2.3",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "angular-ckeditor": "^1.0.3"
   }
 }

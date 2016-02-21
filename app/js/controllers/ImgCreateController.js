@@ -15,6 +15,8 @@ Year.get(function(data) {
 
 
 $scope.Portholio = {};
+
+
 // $scope.Portholio.category = {};
       $scope.createImg = function(file) {
         console.log($scope.Portholio);
@@ -31,7 +33,7 @@ $scope.Portholio = {};
               file.result = data.data;
               $scope.Portholio.img = file.result;
               $scope.Portholio.img.__type = "File";
-              console.log($scope.Portholio);
+              console.log('port', $scope.Portholio);
               $scope.Portholio.category.className = "category";
               $scope.Portholio.category.__type = "Pointer";
               $scope.Portholio.year.className = "year";
@@ -41,6 +43,8 @@ $scope.Portholio = {};
               Img.create($scope.Portholio, function(data) {
                 if (data) {
                   console.log("success");
+                  console.log('data', data);
+                  $state.go('base.editImg');
                 }
               });
           });

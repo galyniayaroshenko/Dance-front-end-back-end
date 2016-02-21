@@ -22,6 +22,7 @@ angular.module('app')
               AboutUs.create($scope.OboutUs, function(data) {
                 if (data) {
                   console.log("success");
+                  $state.go('base.editAboutUs');
                 }
               });
           });

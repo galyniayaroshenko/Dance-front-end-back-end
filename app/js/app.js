@@ -6,8 +6,8 @@ angular
   'ngFileUpload',
   'ngAnimate',
   'mm.foundation',
-  'ngCookies'
-
+  'ngCookies',
+  'ckeditor'
 ])
 .run([
   '$rootScope', '$localStorage', '$state',

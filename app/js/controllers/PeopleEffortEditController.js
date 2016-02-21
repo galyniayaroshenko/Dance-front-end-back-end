@@ -6,6 +6,7 @@ PeopleEffort.getOne({ action: $stateParams.id }, function (data) {
   console.log($scope.peopleEffort);
 });
       $scope.updatePeopleEffort = function(file) {
+        if (file){
         $scope.load = "loading";
         console.log($scope.peopleEffort);
           $http.post("https://api.parse.com/1/files/"+ file.name, file, {
@@ -26,5 +27,13 @@ PeopleEffort.getOne({ action: $stateParams.id }, function (data) {
                 }
               });
           });
+        } else {
+          PeopleEffort.update({action: $stateParams.id}, $scope.peopleEffort, function(data) {
+            if (data) {
+              console.log("success");
+            }
+          });
+        }
+
       }
   }]);

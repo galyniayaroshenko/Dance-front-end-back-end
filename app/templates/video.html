@@ -12,7 +12,7 @@
         </div>
 <div class="row">
           <div class="large-3 medium-4 small-6 columns" ng-repeat="video in videoList">
-            <div ng-bind-html="video.video"></div>
+            <div class="videoWrapper"><div ng-bind-html="video.video"></div></div>
             <div class="panel">
               <h5>{{video.name}}</h5>
               <a ui-sref="base.viewVideo({id:video.objectId})" class="subheader ">View</a> | <a ng-click="deleteVideo({id:video.objectId})" class="subheader">Delete</a>

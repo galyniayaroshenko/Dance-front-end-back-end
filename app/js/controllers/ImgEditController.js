@@ -1,6 +1,6 @@
 angular.module('app')
-  .controller('ImgEditController', ['Img', 'Year', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
-    function (Img, Year, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+  .controller('ImgEditController', ['Img', 'Year', 'Category', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (Img, Year, Category, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
 
     Img.getOne({action: $stateParams.id}, function(data) {
       $scope.Portholio = data;
@@ -8,12 +8,18 @@ angular.module('app')
       console.log('port', $scope.Portholio);
       console.log('portid', $scope.Portholio.year.objectId);
 
-    });
-    console.log('portid', $scope.Portholio.year.objectId);
-    Year.get( function(data) {
-       $scope.year = data;
-      console.log('year', $scope.year);
-    });
+      });
+      Category.get(function(data){
+        $scope.imgCategoryView = data.results;
+        console.log('sc', $scope.imgCategoryView);
+
+      });
+      Year.get(function(data){
+        $scope.imgYearView = data.results;
+        console.log('si', $scope.imgYearView);
+
+      });
+
 
       $scope.updateImg = function(file) {
         $scope.load = "loading";
