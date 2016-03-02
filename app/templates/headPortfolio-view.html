@@ -1,0 +1,37 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.headPortfolio">All Img </a> | <a ui-sref="base.newHeadPortfolio">Add Img </a>
+              </div>
+              <div class="large-9 left category"> Img </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+                  <div class="large-12 column ">
+                    <h3>Details for {{headPortfolio.country}}</h3>
+                    <div class="row">
+                      <div class="large-6 right  panel" >
+                        <div>Img country</div>
+                        <div>Img city</div>
+                        <div>Img description</div>
+                        <div>Img year</div>
+                        <div>Img category</div>
+                      </div>
+                      <div class="large-6 left category panel">
+                        <div>{{headPortfolio.country}}</div>
+                        <div>{{headPortfolioView.city}}</div>
+                        <div>{{headPortfolioView.description}}</div>
+                        <div>{{headPortfolioYearView.year}}</div>
+                        <div>{{headPortfolioCategoryView.name}}</div>
+                      </div>
+                  </div>
+
+                  <a role="button" class="button " ui-sref="base.editHeadPortfolio({id:headPortfolioView.objectId})" >Edit</a>
+                </div>
+        </div>
+</section>

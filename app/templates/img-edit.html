@@ -13,6 +13,20 @@
 <form role="form" ng-submit="editImg()">
   <div class="row">
     <div class="large-12 columns">
+      <label>Image title
+        <input type="text" ng-model="Portholio.title"  name="" id="title" placeholder=" Title Here"></input>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Image website
+        <input type="text" ng-model="Portholio.website"  name="" id="title" placeholder="Website Here"></input>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
       <label>Image country
         <input type="text" ng-model="Portholio.country"  name="" id="title" placeholder="Genre Title Here"></input>
       </label>
@@ -47,6 +61,13 @@
         <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
           <option  ng-repeat="years in imgYearView" value="{{years.objectId}}">{{years.year}}</option>
         </select>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Image number and month
+        <input type="text" ng-model="Portholio.date"  name="" id="title" placeholder="number and month Here"></input>
       </label>
     </div>
   </div>

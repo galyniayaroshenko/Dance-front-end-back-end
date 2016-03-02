@@ -354,6 +354,45 @@ angular.module('app')
     })
 
 
+
+    .state('base.headPortfolio', {
+      url: '/headPortfolio',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/headPortfolio.html',
+          controller: 'HeadPortfolioListController'
+        }
+      }
+    })
+    .state('base.newHeadPortfolio', {
+      url: '/headPortfolio/new',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/headPortfolio-add.html',
+          controller: 'HeadPortfolioCreateController'
+        }
+      }
+    })
+    .state('base.editHeadPortfolio', {
+      url: '/headPortfolio/:id/edit',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/headPortfolio-edit.html',
+          controller: 'HeadPortfolioEditController'
+        }
+      }
+    })
+    .state('base.viewHeadPortfolio', {
+      url: '/headPortfolio/:id/view',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/headPortfolio-view.html',
+          controller: 'HeadPortfolioViewController'
+        }
+      }
+    })
+
+
     .state('acount', {
       url: '/acount',
       views: {

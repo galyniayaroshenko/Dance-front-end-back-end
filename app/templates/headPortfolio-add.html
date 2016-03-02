@@ -5,52 +5,45 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.img">All image</a> | <a ui-sref="base.newImg">Add image</a>
+                <a ui-sref="base.headPortfolio">All Img </a> | <a ui-sref="base.newHeadPortfolio">Add Img </a>
               </div>
-              <div class="large-9 left category"> Image </div>
+              <div class="large-9 left category"> Img </div>
           </div>
           </div>
         </div>
-        <form role="form" ng-submit="addImg()">
+        <form role="form" ng-submit="addHeadPortfolio()">
           <div class="row">
             <div class="large-12 columns">
-              <label>Image title
-                <input type="text" ng-model="Portholio.title"  name="" id="title" placeholder=" Title Here"></input>
+              <label>headPortfolio title
+                <input type="text" ng-model="headPortfolio.title"  name="" id="title" placeholder=" Title Here"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image website
-                <input type="text" ng-model="Portholio.website"  name="" id="title" placeholder="Website Here"></input>
+              <label>headPortfolio country
+                <input type="text" ng-model="headPortfolio.country"  name="" id="title" placeholder="headPortfolio "></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image country
-                <input type="text" ng-model="Portholio.country"  name="" id="title" placeholder="Genre Title Here"></input>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Image city
-                <input type="text" ng-model="Portholio.city"   name="" id="title" placeholder="Genre Title Here"></input>
+              <label>headPortfolio city
+                <input type="text" ng-model="headPortfolio.city"   name="" id="title" placeholder="Genre Title Here"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <label>Description
-                <textarea placeholder="Description music" ng-model="Portholio.description"></textarea>
+                <textarea placeholder="Description music" ng-model="headPortfolio.description"></textarea>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <label>Pick category
-                <select type="text" ng-model="Portholio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
+                <select type="text" ng-model="headPortfolio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
                   <option ng-repeat="categorys in category" value="{{categorys.objectId}}">{{categorys.name}}</option>
                 </select>
               </label>
@@ -58,17 +51,10 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image year
-                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
+              <label>headPortfolio year
+                <select type="text" ng-model="headPortfolio.year.objectId"  name="" id="title" placeholder=" year Here">
                   <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
                 </select>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Image number and month
-                <input type="text" ng-model="Portholio.date"  name="" id="title" placeholder="number and month Here"></input>
               </label>
             </div>
           </div>
@@ -83,7 +69,7 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-            <a role="button" class="button" ng-click="createImg(picFileImg)" value="Save">Save</a>
+            <a role="button" class="button" ng-click="createHeadPortfolio(picFileImg)" value="Save">Save</a>
             <a role="button" href="#" class="button">Reset</a>
           </div>
         </div>

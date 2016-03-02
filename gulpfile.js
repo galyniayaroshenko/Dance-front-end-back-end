@@ -26,7 +26,7 @@ gulp.task('buildLib', function() {
 gulp.task('webserver', function() {
   gulp.src('./build/')
   .pipe(webserver({
-    port: 6639,
+    port: 6630,
     livereload: true,
     open: true,
     fallback: './build/index.html'

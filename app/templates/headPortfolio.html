@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.headPortfolio">All Img </a> | <a ui-sref="base.newHeadPortfolio">Add Img </a>
+              </div>
+              <div class="large-9 left category"> Img </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="headPortfolio in headPortfolioList">
+            <img class="img-content" ng-src="{{headPortfolio.img.url}}">
+            <div class="panel">
+              <h5>{{headPortfolio.country}}</h5>
+              <a ui-sref="base.viewHeadPortfolio({id:headPortfolio.objectId})" class="subheader ">View</a> | <a ng-click="deleteHeadPortfolio({id:headPortfolio.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>
