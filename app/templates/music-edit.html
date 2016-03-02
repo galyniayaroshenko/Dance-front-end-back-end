@@ -44,16 +44,13 @@
                 <textarea placeholder="Description music" ng-model="Music.description" ></textarea>
               </label>
             </div>
+          </div>
             <div class="row">
               <div class="large-12 columns">
             <a role="button"  class="button " ng-click="updateMusic(picFile,picFileImg)" value="Save" >Save</a>
-            <a role="button" href="#" class="button " value="Reset">Reset</a>
+            <a role="button" href="#" class="button " style="margin-right:20px;" value="Reset">Reset</a>{{picFile.name}}{{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
           </div>
         </div>
-      </div>
-          {{picFile.name}}
-          {{picFileImg.name}}
-          <div ng-show="load"><img src="images/load.gif"/></div>
         </form>
 
 

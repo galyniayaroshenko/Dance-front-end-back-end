@@ -57,7 +57,7 @@
               </label>
             </div>
           </div>
-          <div class="row">
+
           <div class="row">
             <div class="large-6 columns">
               <label>Pick img
@@ -69,11 +69,10 @@
           <div class="row">
             <div class="large-12 columns">
             <a role="button" class="button" ng-click="updateHeadPortfolio(picFileImg)" value="Save">Save</a>
-            <a role="button" href="#" class="button">Reset</a>
+            <a role="button" href="#" style="margin-right:20px;" class="button">Reset</a>
+            {{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
           </div>
         </div>
-        </div>
-          {{picFileImg.name}}
-        <div ng-show="load"><img src="images/load.gif" /></div>
+        
         </form>
         </section>
