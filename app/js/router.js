@@ -393,6 +393,44 @@ angular.module('app')
     })
 
 
+    .state('base.language', {
+      url: '/language',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/language.html',
+          controller: 'LanguageListController'
+        }
+      }
+    })
+    .state('base.newLanguage', {
+      url: '/language/new',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/language-add.html',
+          controller: 'LanguageCreateController'
+        }
+      }
+    })
+    .state('base.editLanguage', {
+      url: '/language/:id/edit',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/language-edit.html',
+          controller: 'LanguageEditController'
+        }
+      }
+    })
+    .state('base.viewLanguage', {
+      url: '/language/:id/view',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/language-view.html',
+          controller: 'LanguageViewController'
+        }
+      }
+    })
+
+
     .state('acount', {
       url: '/acount',
       views: {

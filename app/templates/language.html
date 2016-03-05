@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.language">All language </a> | <a ui-sref="base.newLanguage">Add language </a>
+              </div>
+              <div class="large-9 left category"> language </div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="language in languageList">
+            <img class="img-content" ng-src="{{language.img.url}}">
+            <div class="panel">
+              <h5>{{language.name}}</h5>
+              <a ui-sref="base.viewLanguage({id:language.objectId})" class="subheader ">View</a> | <a ng-click="deleteLanguage({id:language.objectId})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

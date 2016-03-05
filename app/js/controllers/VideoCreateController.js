@@ -12,7 +12,7 @@ $scope.video = {};
                 if (data) {
                   $scope.load = '';
                   console.log("success");
-                  $state.go('base.editVideo');
+                  $state.go('base.editVideo', {id:data.objectId});
                 }
               });
       }

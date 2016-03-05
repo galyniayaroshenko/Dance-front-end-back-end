@@ -43,8 +43,8 @@ $scope.Portholio = {};
               Img.create($scope.Portholio, function(data) {
                 if (data) {
                   console.log("success");
-                  console.log('data', data);
-                  $state.go('base.editImg');
+                  console.log('data', data.objectId);
+                  $state.go('base.editImg', {id:data.objectId});
                 }
               });
           });

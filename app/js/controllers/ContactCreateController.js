@@ -11,7 +11,7 @@ angular.module('app')
       if (data) {
         $scope.load = '';
         console.log("success");
-        $state.go('base.editContact');
+        $state.go('base.editContact', {id:data.objectId});
       }
     });
   }

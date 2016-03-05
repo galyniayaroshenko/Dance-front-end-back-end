@@ -19,12 +19,14 @@
               <div class="large-6 right  panel" >
                 <div>Music Title</div>
                 <div>Music Description</div>
-                <!-- <div>Music img</div> -->
+                <div>Music Title_en</div>
+                <div>Music Description_en</div>
               </div>
               <div class="large-6 left category panel">
                 <div>{{viewMusic.title}}</div>
                 <div>{{viewMusic.description}}</div>
-                <!-- <img ng-src="{{viewMusic.img.url}}"> -->
+                <div>{{viewMusic.title_en}}</div>
+                <div>{{viewMusic.description_en}}</div>
               </div>
           </div>
           <a role="button" class="button " ui-sref="base.editMusic({id:viewMusic.objectId})" >Edit</a>

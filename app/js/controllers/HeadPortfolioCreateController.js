@@ -7,7 +7,7 @@ Category.get(function(data) {
   $scope.imgCategoryView = data.results;
   console.log('sss', $scope.imgCategoryView);
   $scope.category = [];
-  for (var i = $scope.imgCategoryView.length - 1; i > ($scope.imgCategoryView.length - ( $scope.imgCategoryView.length - 11)); i--) {
+  for (var i = $scope.imgCategoryView.length -1; i > $scope.imgCategoryView.length - 4; i--) {
     $scope.category.push($scope.imgCategoryView[i]);
   }
   console.log('sc', $scope.category);
@@ -52,8 +52,7 @@ $scope.headPortfolio = {};
                 if (data) {
                   console.log("success");
                   console.log('data', data);
-                  //console.log('hhh', $scope.headPortfolio.objectId);
-                  //$state.go('base.editHeadPortfolio');
+                  $state.go('base.editHeadPortfolio', {id:data.objectId});
                 }
               });
           });

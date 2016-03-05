@@ -26,6 +26,20 @@
     </div>
   </div>
   <div class="row">
+    <div class="large-12 columns">
+      <label>News name_en
+        <input type="text" ng-model="news.name_en"  name="" id="title" placeholder="News name_en Here"></input>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>News description_en
+        <textarea ckeditor placeholder="News description" ng-model="news.description_en"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
     <div class="large-6 columns">
       <label>Pick img
         <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"

@@ -22,7 +22,7 @@
                    News.create($scope.news, function(data) {
                      if (data) {
                        console.log("success");
-                       $state.go('base.editNews');
+                       $state.go('base.editNews', {id:data.objectId});
                      }
                    });
                });

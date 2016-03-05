@@ -11,7 +11,7 @@ angular.module('app')
       if (data) {
         $scope.load = '';
         console.log("success");
-        $state.go('base.editCategory');
+        $state.go('base.editCategory', {id:data.objectId});
       }
     });
   }

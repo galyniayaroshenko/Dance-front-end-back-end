@@ -1,7 +1,5 @@
 
     <section class="main-section" ng-submit="addMusic()">
-
-
       <div class="large-12 column panel">
         <div class="row">
           <div class="large-12 columdepartments panel ">
@@ -13,9 +11,6 @@
           </div>
           </div>
         </div>
-
-
-
       <form>
           <div class="row">
             <div class="large-12 columns">
@@ -23,9 +18,7 @@
                   <input type="text" ng-model="music.title"  name="" class="text" id="title" placeholder="Music Title Here"></input>
               </label>
             </div>
-
           </div>
-
           <div class="row">
             <div class="large-6 columns">
               <label>Pick img music
@@ -40,23 +33,31 @@
               </label>
             </div>
           </div>
-
-
-
           <div class="row">
             <div class="large-6 columns">
-
               <input id="checkbox1" type="checkbox" ng-model="music.visible" name="visible"><label for="checkbox1">Visible</label>
-
             </div>
           </div>
-
           <div class="row">
             <div class="large-12 columns">
               <label>Description
                 <textarea placeholder="Description music" ng-model="music.description"></textarea>
               </label>
             </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Title music_en
+                    <input type="text" ng-model="Music.title_en" name="" class="text" id="title" placeholder="Music Title_en Here"></input>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Description_en
+                  <textarea placeholder="Description music" ng-model="Music.description_en" ></textarea>
+                </label>
+              </div>
             </div>
             <div class="row">
               <div class="large-12 columns">

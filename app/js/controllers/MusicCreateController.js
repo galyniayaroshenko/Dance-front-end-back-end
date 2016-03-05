@@ -37,7 +37,7 @@ $scope.music = {}
                MMusic.create($scope.music, function(data) {
                  if (data) {
                    console.log("success");
-                   $state.go('base.editMusic');
+                   $state.go('base.editMusic', {id:data.objectId});
                  }
                });
             });
