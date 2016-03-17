@@ -4,58 +4,58 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.aboutUs">All AboutUs</a> | <a ui-sref="base.newAboutUs">Add AboutUs</a>
+                <a ui-sref="base.aboutUs">Все "Про нас"</a> | <a ui-sref="base.newAboutUs">Додати "Про нас"</a>
               </div>
-              <div class="large-9 left category"> AboutUs </div>
+              <div class="large-9 left category"> Про нас </div>
           </div>
           </div>
         </div>
 <form role="form" ng-submit="editAboutUs()">
   <div class="row">
     <div class="large-12 columns">
-      <label>AboutUs name
-        <input type="text" ng-model="OboutUs.name"  name="" id="title" placeholder="AboutUs name Here"></input>
+      <label>Назва заголовку
+        <input type="text" ng-model="OboutUs.name"  name="" id="title" placeholder="Введіть заголовок"></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label> AboutUs Title
-        <input type="text" ng-model="OboutUs.title1"   name="" id="title" placeholder="AboutUs Title Here"></input>
+      <label> Назва підзаголовку
+        <input type="text" ng-model="OboutUs.title1"   name="" id="title" placeholder="Введіть підзаголовок"></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>AboutUs description
-        <textarea placeholder="AboutUs description" ng-model="OboutUs.description1"></textarea>
+      <label>Опис
+        <textarea placeholder="Опис" ng-model="OboutUs.description1"></textarea>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>AboutUs name_en
-        <input type="text" ng-model="OboutUs.name_en"  name="" id="title" placeholder="AboutUs name_en Here"></input>
+      <label>Назва заголовку Еn
+        <input type="text" ng-model="OboutUs.name_en"  name="" id="title" placeholder="Назва заголовку En "></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label> AboutUs Title_En
-        <input type="text" ng-model="OboutUs.title_en"   name="" id="title" placeholder="AboutUs Title_en Here"></input>
+      <label> Назва підзаголовку En
+        <input type="text" ng-model="OboutUs.title_en"   name="" id="title" placeholder="Назва підзаголовку Еn "></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>AboutUs description_en
-        <textarea placeholder="AboutUs description" ng-model="OboutUs.description_en"></textarea>
+      <label>Опис Еn
+        <textarea placeholder="Опис Еn" ng-model="Опис Еn"></textarea>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-6 columns">
-      <label>Pick img
+      <label>Виберіть картинку
         <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
 accept="*" ngf-max-size="100MB">
       </label>
@@ -63,8 +63,8 @@ accept="*" ngf-max-size="100MB">
   </div>
   <div class="row">
     <div class="large-12 columns">
-    <a role="button" class="button" ng-click="updateAboutUs(picFileImg)" value="Save">Save</a>
-    <a role="button" href="#" style="margin-right:20px;" class="button">Reset</a>{{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
+    <a role="button" class="button" ng-click="updateAboutUs(picFileImg)" value="Save">Зберегти</a>
+    <a role="button" href="#" style="margin-right:20px;" class="button">Відмінити</a>{{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
   </div>
   </div>
 </div>

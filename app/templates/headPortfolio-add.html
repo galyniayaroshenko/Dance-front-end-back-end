@@ -5,45 +5,45 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.headPortfolio">All Img </a> | <a ui-sref="base.newHeadPortfolio">Add Img </a>
+                <a ui-sref="base.headPortfolio">Всі фото головної </a> | <a ui-sref="base.newHeadPortfolio">Додати фото головної</a>
               </div>
-              <div class="large-9 left category"> Img </div>
+              <div class="large-9 left category"> Фото головної</div>
           </div>
           </div>
         </div>
         <form role="form" ng-submit="addHeadPortfolio()">
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio title
-                <input type="text" ng-model="headPortfolio.title"  name="" id="title" placeholder=" Title Here"></input>
+              <label>Назва
+                <input type="text" ng-model="headPortfolio.title"  name="" id="title" placeholder=" Введіть назву тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio country
-                <input type="text" ng-model="headPortfolio.country"  name="" id="title" placeholder="headPortfolio "></input>
+              <label>Країна
+                <input type="text" ng-model="headPortfolio.country"  name="" id="title" placeholder="Введіть країну тут "></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio city
-                <input type="text" ng-model="headPortfolio.city"   name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Місто
+                <input type="text" ng-model="headPortfolio.city"   name="" id="title" placeholder="Введіть місто тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Description
-                <textarea placeholder="Description music" ng-model="headPortfolio.description"></textarea>
+              <label>Опис
+                <textarea placeholder="Опис" ng-model="headPortfolio.description"></textarea>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Pick category
-                <select type="text" ng-model="headPortfolio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
+              <label>Виберіть категорію
+                <select type="text" ng-model="headPortfolio.category.objectId"  name="" id="title" >
                   <option ng-repeat="categorys in category" value="{{categorys.objectId}}">{{categorys.name}}</option>
                 </select>
               </label>
@@ -51,8 +51,8 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio year
-                <select type="text" ng-model="headPortfolio.year.objectId"  name="" id="title" placeholder=" year Here">
+              <label>Виберіть рік
+                <select type="text" ng-model="headPortfolio.year.objectId"  name="" id="title" >
                   <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
                 </select>
               </label>
@@ -60,35 +60,35 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio title_en
-                <input type="text" ng-model="headPortfolio.title_en"  name="" id="title" placeholder=" Title_en Here"></input>
+              <label>Назва en
+                <input type="text" ng-model="headPortfolio.title_en"  name="" id="title" placeholder=" Введіть назву en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio country_en
-                <input type="text" ng-model="headPortfolio.country_en"  name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Країна en
+                <input type="text" ng-model="headPortfolio.country_en"  name="" id="title" placeholder="Введіть країну en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>headPortfolio city_en
-                <input type="text" ng-model="headPortfolio.city_en"   name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Місто en
+                <input type="text" ng-model="headPortfolio.city_en"   name="" id="title" placeholder="Введіть місто en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Description_en
-                <textarea placeholder="Description music" ng-model="headPortfolio.description_en"></textarea>
+              <label>Опис  en
+                <textarea placeholder="Опис en " ng-model="headPortfolio.description_en"></textarea>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-6 columns">
-              <label>Pick img
+              <label>Виберіть картинку
                 <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
         accept="*" ngf-max-size="100MB">
               </label>
@@ -96,8 +96,8 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-            <a role="button" class="button" ng-click="createHeadPortfolio(picFileImg)" value="Save">Save</a>
-            <a role="button" href="#" style="margin-right:20px;" class="button">Reset</a>
+            <a role="button" class="button" ng-click="createHeadPortfolio(picFileImg)" value="Save">Зберегти</a>
+            <a role="button" href="#" style="margin-right:20px;" class="button">Відмінити</a>
             {{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
           </div>
       </div>

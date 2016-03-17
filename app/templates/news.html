@@ -4,9 +4,9 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.news">All News </a> | <a ui-sref="base.newNews">Add News </a>
+                <a ui-sref="base.news">Всі новини </a> | <a ui-sref="base.newNews">Додати новини </a>
               </div>
-              <div class="large-9 left category"> News </div>
+              <div class="large-9 left category"> Новини </div>
           </div>
           </div>
         </div>
@@ -15,7 +15,7 @@
             <img class="img-content" ng-src="{{news.img.url}}">
             <div class="panel">
               <h5>{{news.name}}</h5>
-              <a ui-sref="base.viewNews({id:news.objectId})" class="subheader ">View</a> | <a ng-click="deleteNews({id:news.objectId})" class="subheader">Delete</a>
+              <a ui-sref="base.viewNews({id:news.objectId})" class="subheader ">Детально</a> | <a ng-click="deleteNews({id:news.objectId})" class="subheader">Видалити</a>
             </div>
           </div>
 </div>

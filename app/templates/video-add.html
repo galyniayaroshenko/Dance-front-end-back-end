@@ -4,54 +4,54 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.video">All video </a> | <a ui-sref="base.newVideo">Add video </a>
+                <a ui-sref="base.video">Всі відео </a> | <a ui-sref="base.newVideo">Додати відео </a>
               </div>
-              <div class="large-9 left category"> Video </div>
+              <div class="large-9 left category"> Відео </div>
           </div>
           </div>
         </div>
         <form role="form" ng-submit="addVideo()">
           <div class="row">
             <div class="large-12 columns">
-              <label>name video
-                <input type="text" ng-model="video.name"  name="" id="title" placeholder="VIdeo name Here"></input>
+              <label>Назва
+                <input type="text" ng-model="video.name"  name="" id="title" placeholder="Введіть назву тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
 
-              <label>description video
-                <input type="text" ng-model="video.description"  name="" id="title" placeholder="VIdeo description Here"></input>
+              <label>Опис
+                <input type="text" ng-model="video.description"  name="" id="title" placeholder="Введіть опис тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>name video_en
-                <input type="text" ng-model="video.name_en"   name="" id="title" placeholder="Video name_en Here"></input>
+              <label>Назва en
+                <input type="text" ng-model="video.name_en"   name="" id="title" placeholder="Введіть назву en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>description video_en
-                <input type="text" ng-model="video.description_en"   name="" id="title" placeholder="Video description_en Here"></input>
+              <label>Опис en
+                <input type="text" ng-model="video.description_en"   name="" id="title" placeholder="Введіть опис en тут"></input>
               </label>
             </div>
           </div>
 
           <div class="row">
             <div class="large-6 columns">
-              <label>Pick video
-                  <input type="text" ng-model="video.video"  name="" id="title" placeholder="VIdeo name Here"></input>
+              <label>Виберіть відео
+                  <input type="text" ng-model="video.video"  name="" id="title"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-            <a role="button" class="button" ng-click="createVideo()" value="Save">Save</a>
-            <a role="button" href="#" class="button">Reset</a>
+            <a role="button" class="button" ng-click="createVideo()" value="Save">Зберегти</a>
+            <a role="button" href="#" class="button">Відмінити</a>
           </div>
           </div>
           {{picFileImg.name}}

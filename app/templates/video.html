@@ -4,9 +4,9 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.video">All video</a> | <a ui-sref="base.newVideo">Add video</a>
+                <a ui-sref="base.video">Всі відео</a> | <a ui-sref="base.newVideo">Додати відео</a>
               </div>
-              <div class="large-9 left category"> Video </div>
+              <div class="large-9 left category"> Відео </div>
           </div>
           </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="videoWrapper"><div ng-bind-html="video.video"></div></div>
             <div class="panel">
               <h5>{{video.name}}</h5>
-              <a ui-sref="base.viewVideo({id:video.objectId})" class="subheader ">View</a> | <a ng-click="deleteVideo({id:video.objectId})" class="subheader">Delete</a>
+              <a ui-sref="base.viewVideo({id:video.objectId})" class="subheader ">Детально</a> | <a ng-click="deleteVideo({id:video.objectId})" class="subheader">Видалити</a>
             </div>
           </div>
 </div>

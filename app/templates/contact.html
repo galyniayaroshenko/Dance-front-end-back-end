@@ -4,9 +4,9 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.contact">All Contact </a> | <a ui-sref="base.newContact">Add Contact </a>
+                <a ui-sref="base.contact">Всі контакти </a> | <a ui-sref="base.newContact">Додати контакти </a>
               </div>
-              <div class="large-9 left category"> Contact </div>
+              <div class="large-9 left category"> Контакти </div>
           </div>
           </div>
         </div>
@@ -15,7 +15,7 @@
             <img class="img-content" ng-src="{{contact.img.url}}">
             <div class="panel">
               <h5>{{contact.name}}</h5>
-              <a ui-sref="base.viewContact({id:contact.objectId})" class="subheader ">View</a> | <a ng-click="deleteContact({id:contact.objectId})" class="subheader">Delete</a>
+              <a ui-sref="base.viewContact({id:contact.objectId})" class="subheader ">Детально</a> | <a ng-click="deleteContact({id:contact.objectId})" class="subheader">Видалити</a>
             </div>
           </div>
 </div>

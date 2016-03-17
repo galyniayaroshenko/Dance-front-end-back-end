@@ -4,53 +4,53 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.news">All News </a> | <a ui-sref="base.newNews">Add News </a>
+                <a ui-sref="base.news">Всі новини </a> | <a ui-sref="base.newNews">Додати новини </a>
               </div>
-              <div class="large-9 left category"> News </div>
+              <div class="large-9 left category"> Новини </div>
           </div>
           </div>
         </div>
 <form role="form" ng-submit="editNews()">
   <div class="row">
     <div class="large-12 columns">
-      <label>News name
-        <input type="text" ng-model="news.name"  name="" id="title" placeholder="News name Here"></input>
+      <label>Назва
+        <input type="text" ng-model="news.name"  name="" id="title" placeholder="Введіть назву тут"></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>News description
-        <textarea ckeditor placeholder="News description" ng-model="news.description1"></textarea>
+      <label>Опис
+        <textarea ckeditor ng-model="news.description1" placeholder="Введіть опис тут"></textarea>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>News name_en
-        <input type="text" ng-model="news.name_en"  name="" id="title" placeholder="News name_en Here"></input>
+      <label>Назва en
+        <input type="text" ng-model="news.name_en"  name="" id="title" placeholder="Введіт назву en тут"></input>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>News description_en
-        <textarea ckeditor placeholder="News description" ng-model="news.description_en"></textarea>
+      <label>Опис en
+        <textarea ckeditor placeholder="Опис еn" ng-model="news.description_en"></textarea>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-6 columns">
-      <label>Pick img
-        <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
+      <label>Вибрати картинку
+        <input type="file" size="30" file-model = "myFile" ngf-select name="fileimg" ng-model="picFileImg"
 accept="*" ngf-max-size="100MB">
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-    <a role="button" class="button" ng-click="updateNews(picFileImg)" value="Save">Save</a>
-    <a role="button" href="#" style="margin-right:20px;" class="button">Reset</a>
+    <a role="button" class="button" ng-click="updateNews(picFileImg)" value="Save">Зберегти</a>
+    <a role="button" href="#" style="margin-right:20px;" class="button">Відмінити</a>
     {{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
   </div>
 </div>

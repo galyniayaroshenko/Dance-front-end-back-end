@@ -5,52 +5,52 @@
           <div class="large-12 columdepartments panel ">
             <div class="row">
               <div class="large-3 right">
-                <a ui-sref="base.img">All image</a> | <a ui-sref="base.newImg">Add image</a>
+                <a ui-sref="base.img">Всі фото</a> | <a ui-sref="base.newImg">Додати фото</a>
               </div>
-              <div class="large-9 left category"> Image </div>
+              <div class="large-9 left category"> Фото </div>
           </div>
           </div>
         </div>
         <form role="form" ng-submit="addImg()">
           <div class="row">
             <div class="large-12 columns">
-              <label>Image title
-                <input type="text" ng-model="Portholio.title"  name="" id="title" placeholder=" Title Here"></input>
+              <label>Назва
+                <input type="text" ng-model="Portholio.title"  name="" id="title" placeholder=" Введіть назву тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image website
-                <input type="text" ng-model="Portholio.website"  name="" id="title" placeholder="Website Here"></input>
+              <label>Website
+                <input type="text" ng-model="Portholio.website"  name="" id="title" placeholder="Введіть Website тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image country
-                <input type="text" ng-model="Portholio.country"  name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Країна
+                <input type="text" ng-model="Portholio.country"  name="" id="title" placeholder="Введіть країну тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image city
-                <input type="text" ng-model="Portholio.city"   name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Місто
+                <input type="text" ng-model="Portholio.city"   name="" id="title" placeholder="Введіть місто тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Description
-                <textarea placeholder="Description music" ng-model="Portholio.description"></textarea>
+              <label>Опис
+                <textarea placeholder="Опис" ng-model="Portholio.description"></textarea>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Pick category
-                <select type="text" ng-model="Portholio.category.objectId"  name="" id="title" placeholder="Genre Title Here">
+              <label>Виберіть категорію
+                <select type="text" ng-model="Portholio.category.objectId"  name="" id="title" >
                   <option ng-repeat="categorys in category" value="{{categorys.objectId}}">{{categorys.name}}</option>
                 </select>
               </label>
@@ -58,8 +58,8 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image year
-                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" placeholder=" year Here">
+              <label>Виберіть рік
+                <select type="text" ng-model="Portholio.year.objectId"  name="" id="title" >
                   <option ng-repeat="years in year" value="{{years.objectId}}">{{years.year}}</option>
                 </select>
               </label>
@@ -67,49 +67,49 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image number and month
-                <input type="text" ng-model="Portholio.date"  name="" id="title" placeholder="number and month Here"></input>
+              <label>Число і місяць
+                <input type="text" ng-model="Portholio.date"  name="" id="title" placeholder="Введіть число і місяць"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image title_en
-                <input type="text" ng-model="Portholio.title_en"  name="" id="title" placeholder=" Title_en Here"></input>
+              <label>Назва en
+                <input type="text" ng-model="Portholio.title_en"  name="" id="title" placeholder="Введіть назва en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image number and month_en
-                <input type="text" ng-model="Portholio.date_en"  name="" id="title" placeholder="number and month_en Here"></input>
+              <label>Число і місяць en
+                <input type="text" ng-model="Portholio.date_en"  name="" id="title" placeholder="Введіть число і місяць en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image country_en
-                <input type="text" ng-model="Portholio.country_en"  name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Країна en
+                <input type="text" ng-model="Portholio.country_en"  name="" id="title" placeholder="Введіть країну en тут"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Image city_en
-                <input type="text" ng-model="Portholio.city_en"   name="" id="title" placeholder="Genre Title Here"></input>
+              <label>Місто en
+                <input type="text" ng-model="Portholio.city_en"   name="" id="title" placeholder="Місто en"></input>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <label>Description_en
-                <textarea placeholder="Description_en music" ng-model="Portholio.description_en"></textarea>
+              <label>Опис en
+                <textarea placeholder="Description_en music"></textarea>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="large-6 columns">
-              <label>Pick img
+              <label>Виберіть картинку
                 <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileImg"
         accept="*" ngf-max-size="100MB">
               </label>
@@ -117,8 +117,8 @@
           </div>
           <div class="row">
             <div class="large-12 columns">
-            <a role="button" class="button" ng-click="createImg(picFileImg)" value="Save">Save</a>
-            <a role="button" href="#" style="margin-right:20px;" class="button">Reset</a>
+            <a role="button" class="button" ng-click="createImg(picFileImg)" value="Save">Зберегти</a>
+            <a role="button" href="#" style="margin-right:20px;" class="button">Відмінити</a>
             {{picFileImg.name}}<span ng-show="load"><img src="images/load.gif" /></span>
           </div>
         </div>
