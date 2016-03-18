@@ -1,9 +1,7 @@
 angular.module('app')
-  .controller('AboutUsCreateController', ['AboutUs', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function (AboutUs, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
-
- $scope.OboutUs = {};
-
-
+  .controller('AboutUsCreateController', ['AboutUs', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (AboutUs, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+      $scope.OboutUs = {};
       $scope.createAboutUs = function(file) {
         $scope.load = "loading";
         console.log($scope.OboutUs);

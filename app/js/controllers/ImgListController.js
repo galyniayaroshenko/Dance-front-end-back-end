@@ -1,10 +1,9 @@
 angular.module('app')
-.controller('ImgListController', ['$scope', '$state', '$window', 'Img', function($scope, $state, $window, Img) {
+.controller('ImgListController', ['$scope', '$state', '$window', 'Img',
+  function($scope, $state, $window, Img) {
     Img.get(function(data){
-      $scope.imgList = data.results
-      console.log($scope.imgList);
+      $scope.imgList = data.results;
     });
-
   $scope.deleteImg = function (arg) {
     $scope.arg = arg;
     if(confirm("Видалити?")){
@@ -15,5 +14,4 @@ angular.module('app')
     });
   };
   };
-
 }]);

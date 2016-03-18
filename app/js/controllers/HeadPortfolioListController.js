@@ -2,10 +2,8 @@ angular.module('app')
 .controller('HeadPortfolioListController', ['$scope', '$state', '$window', 'HeadPortfolio',
   function($scope, $state, $window, HeadPortfolio) {
     HeadPortfolio.get(function(data){
-      $scope.headPortfolioList = data.results
-      console.log($scope.headPortfolioList);
+      $scope.headPortfolioList = data.results;
     });
-
   $scope.deleteHeadPortfolio = function (arg) {
     $scope.arg = arg;
     if(confirm("Видалити?")){
@@ -16,5 +14,4 @@ angular.module('app')
     });
   };
   };
-
 }]);

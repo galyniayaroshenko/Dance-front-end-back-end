@@ -91,8 +91,6 @@ angular.module('app')
         }
       }
     })
-
-
     .state('base.video', {
       url: '/video',
       views: {
@@ -275,9 +273,6 @@ angular.module('app')
         }
       }
     })
-
-
-
     .state('base.category', {
       url: '/category',
       views: {
@@ -314,8 +309,6 @@ angular.module('app')
         }
       }
     })
-
-
     .state('base.year', {
       url: '/year',
       views: {
@@ -352,9 +345,6 @@ angular.module('app')
         }
       }
     })
-
-
-
     .state('base.headPortfolio', {
       url: '/headPortfolio',
       views: {
@@ -391,8 +381,6 @@ angular.module('app')
         }
       }
     })
-
-
     .state('base.language', {
       url: '/language',
       views: {
@@ -429,8 +417,6 @@ angular.module('app')
         }
       }
     })
-
-
     .state('acount', {
       url: '/acount',
       views: {
@@ -445,17 +431,8 @@ angular.module('app')
         'content@acount': {
           templateUrl: 'templates/signin.html',
           controller: 'signinController'
-
         }
       }
     })
-
-
-
-
-
-
-
-
     $urlRouterProvider.otherwise('/acount/signin');
   }]);

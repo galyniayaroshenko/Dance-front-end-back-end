@@ -1,18 +1,12 @@
  angular.module('app')
-  .controller('MusicEditController', ['MMusic', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function (MMusic, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+  .controller('MusicEditController', ['MMusic', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (MMusic, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
       MMusic.getOne({action: $stateParams.id}, function(data) {
         $scope.Music = data;
-        console.log($scope.Music.title);
       });
-
-    console.log($stateParams.id);
-
-$scope.Music = {}
-
-
+      $scope.Music = {};
       $scope.updateMusic = function(file, fileImg) {
         $scope.load = "loading";
-        console.log($scope.Music);
           $http.post("https://api.parse.com/1/files/"+ file.name, file, {
              withCredentials: false,
              headers: {
@@ -23,7 +17,6 @@ $scope.Music = {}
               file.result = data.data;
               $scope.Music.songs = file.result;
               $scope.Music.songs.__type = "File";
-              console.log($scope.Music.songs);
             $http.post("https://api.parse.com/1/files/"+ fileImg.name, fileImg, {
                withCredentials: false,
                headers: {
@@ -42,7 +35,5 @@ $scope.Music = {}
                });
             });
           });
-      console.log($scope.Music);
-        console.log("wow");
       }
   }]);

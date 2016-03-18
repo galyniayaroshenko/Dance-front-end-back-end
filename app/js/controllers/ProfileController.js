@@ -6,18 +6,9 @@ angular.module('app')
       } else {
         $state.go('acount.signin');
       }
-
-console.log("wow");
-    console.log($stateParams.id);
     $scope.viewProf = currentUserService.user();
-    console.log($scope.viewProf);
     $scope.viewProfile = Profile.get({action : $stateParams.id});
-    console.log($scope.viewProfile);
-
-$scope.signout = function() {
-  console.log('logout');
-  currentUserService.signout();
-
-}
-
+    $scope.signout = function() {
+      currentUserService.signout();
+    }
   }]);

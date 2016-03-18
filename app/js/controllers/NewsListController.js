@@ -1,11 +1,9 @@
 angular.module('app')
 .controller('NewsListController', ['$scope', '$state', '$window', 'News', '$sce',
   function($scope, $state, $window, News, $sce) {
-  $scope.newsList = News.get(function(data){
-    $scope.newsList = data.results
-    });
-console.log($scope.aboutUsList);
-
+    $scope.newsList = News.get(function(data){
+      $scope.newsList = data.results
+      });
   $scope.deleteNews = function (arg) {
     $scope.arg = arg;
     if(confirm("Видалити?")){

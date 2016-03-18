@@ -9,15 +9,11 @@ angular.module('app')
       function ($q, $location, $localStorage) {
         return {
           request: function (config) {
-
               config.headers['X-Parse-Application-Id'] = 'H5KAAYxtQs9mHofpMrAMR79g4fRB8gVi8u1L0WD8';
               config.headers['X-Parse-REST-API-Key'] = 'whotVlXPedvga8enyrfzWdywrBgL024TynNQiYH9';
             return config;
           },
           responseError: function (response) {
-            // if(response.status === 401 || response.status === 403) {
-            //   $location.path('/account/signin');
-            // }
             $q.reject(response);
           }
         }

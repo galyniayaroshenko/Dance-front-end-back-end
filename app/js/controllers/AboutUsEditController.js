@@ -1,11 +1,9 @@
 angular.module('app')
-  .controller('AboutUsEditController', ['AboutUs', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http', function (AboutUs, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
-
-    AboutUs.getOne({action: $stateParams.id}, function(data) {
-      $scope.OboutUs = data;
-    });
-
-
+  .controller('AboutUsEditController', ['AboutUs', '$stateParams', '$scope', '$state', 'Upload', '$timeout', 'host', '$http',
+    function (AboutUs, $stateParams, $scope, $state, Upload, $timeout, host, $http) {
+      AboutUs.getOne({action: $stateParams.id}, function(data) {
+        $scope.OboutUs = data;
+      });
       $scope.updateAboutUs = function(file) {
         $scope.load = "loading";
         console.log($scope.OboutUs);

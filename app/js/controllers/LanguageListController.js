@@ -4,8 +4,6 @@ angular.module('app')
   $scope.languageList = Language.get(function(data){
     $scope.languageList = data.results
     });
-console.log('ll', $scope.languageList);
-
   $scope.deleteLanguage = function (arg) {
     $scope.arg = arg;
     if(confirm("Видалити?")){
@@ -16,5 +14,4 @@ console.log('ll', $scope.languageList);
     });
   };
   };
-
 }]);

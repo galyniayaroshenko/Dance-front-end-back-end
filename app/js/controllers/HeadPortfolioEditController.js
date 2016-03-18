@@ -4,10 +4,6 @@ angular.module('app')
 
     HeadPortfolio.getOne({action: $stateParams.id}, function(data) {
       $scope.headPortfolio = data;
-      console.log($scope.headPortfolio.title);
-      console.log('port', $scope.headPortfolio);
-      console.log('portid', $scope.headPortfolio.year.objectId);
-
       });
       Category.get(function(data){
         $scope.category = data.results;
@@ -15,8 +11,6 @@ angular.module('app')
         for (var i = $scope.category.length - 1; i > ($scope.category.length - ( $scope.category.length - 11)); i--) {
           $scope.imgCategoryView.push($scope.category[i]);
         }
-        console.log('sc', $scope.imgCategoryView);
-
       });
       Year.get(function(data){
         $scope.category = data.results;
@@ -24,13 +18,9 @@ angular.module('app')
         for (var i = 0; i < ($scope.category.length - ( $scope.category.length - 3)); i++) {
           $scope.imgYearView.push($scope.category[i]);
         }
-
       });
-
-
       $scope.updateHeadPortfolio = function(file) {
         $scope.load = "loading";
-        console.log($scope.headPortfolio);
           $http.post("https://api.parse.com/1/files/"+ file.name, file, {
              withCredentials: false,
              headers: {
@@ -42,7 +32,6 @@ angular.module('app')
               file.result = data.data;
               $scope.headPortfolio.img = file.result;
               $scope.headPortfolio.img.__type = "File";
-              console.log($scope.headPortfolio.img);
               $scope.headPortfolio.category.className = "category";
               $scope.headPortfolio.category.__type = "Pointer";
               $scope.headPortfolio.year.className = "year";
