@@ -6,9 +6,11 @@ angular.module('app')
       });
       Category.get(function(data){
         $scope.imgCategoryView = data.results;
+        console.log('$scope.imgCategoryView', $scope.imgCategoryView[0].name);
       });
       Year.get(function(data){
         $scope.imgYearView = data.results;
+        console.log('$scope.imgYearView', $scope.imgYearView[0].year);
       });
       $scope.updateImg = function(file) {
         $scope.load = "loading";
@@ -19,16 +21,18 @@ angular.module('app')
              },
              transformRequest: angular.identity
           }).then(function(data) {
-              $scope.load = '';
-              file.result = data.data;
-              $scope.Portholio.img = file.result;
-              $scope.Portholio.img.__type = "File";
-              $scope.Portholio.category.className = "category";
-              $scope.Portholio.category.__type = "Pointer";
-              $scope.Portholio.year.className = "year";
-              $scope.Portholio.year.__type = "Pointer";
+            $scope.load = '';
+            file.result = data.data;
+            $scope.Portholio.img = file.result;
+            $scope.Portholio.img.__type = "File";
+            $scope.Portholio.category.className = "category";
+            $scope.Portholio.category.__type = "Pointer";
+            $scope.Portholio.year.className = "year";
+            $scope.Portholio.year.__type = "Pointer";
+
               Img.update({action: $stateParams.id}, $scope.Portholio, function(data) {
                 if (data) {
+                  console.log('oye');
                 }
               });
           });

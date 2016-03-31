@@ -11,6 +11,7 @@ angular.module('app')
         for (var i = $scope.category.length - 1; i > ($scope.category.length - ( $scope.category.length - 11)); i--) {
           $scope.imgCategoryView.push($scope.category[i]);
         }
+        console.log('$scope.imgCategoryView', $scope.imgCategoryView[0].name);
       });
       Year.get(function(data){
         $scope.category = data.results;
@@ -18,6 +19,7 @@ angular.module('app')
         for (var i = 0; i < ($scope.category.length - ( $scope.category.length - 3)); i++) {
           $scope.imgYearView.push($scope.category[i]);
         }
+        console.log('$scope.imgYearView', $scope.imgYearView[0].year);
       });
       $scope.updateHeadPortfolio = function(file) {
         $scope.load = "loading";
